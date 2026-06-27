@@ -1,21 +1,22 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+# Gradle
+.gradle/
+build/
 
-# Project exclude paths
-/core/build/
-/data/build/
-/domain/build/
-/presentation/build/
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Android Studio
+local.properties
+.externalNativeBuild/
+.cxx/
+captures/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Multi-module build folders
+**/build/

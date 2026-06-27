@@ -10,10 +10,19 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.appsnweb.astronomer.core.theme.AstronomerTheme
 import com.appsnweb.astronomer.presentation.ui.AstronomerApp
+import dagger.hilt.android.AndroidEntryPoint
+import com.appsnweb.astronomer.domain.Logger
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var logger: Logger
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        logger.log("MainActivity Created")
         enableEdgeToEdge()
         setContent {
             AstronomerTheme {
